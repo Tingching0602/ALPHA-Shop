@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpha Shop</title>
+  <link rel="stylesheet" href=" dist/main.css">
+</head>
+
+<body>
+  <header>
+    <div class="container d-flex align-items-center">
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">
+        <img src="./dist/image/hamburger@2x.png" alt="">
+      </label>
+      <div class="nav-bar">
+        <ul class="nav">
+          <li><a href="#">男款</a></li>
+          <li><a href="#">女款</a></li>
+          <li><a href="#">最新消息</a></li>
+          <li><a href="#">客製商品</a></li>
+          <li><a href="#">聯絡我們</a></li>
+        </ul>
+      </div>
+
+
+
+      <div class="logo">
+        <img src="./dist/image/Logo@2x.png" alt="" class="brand-logo">
+      </div>
+      <div class="icon-link d-flex">
+        <a href="#"><img src="./dist/image/search@2x.png" alt="" class="search"></a>
+        <a href="#"><img src="./dist/image/cart@2x.png" alt="" class="shopping-cart"></a>
+        <a href="#"><img src="./dist/image/dark.png" alt="" class="night-mode"></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- checkout stepper -->
+      <div class="checkout-wrapper">
+        <h2 class="checkout-title">結帳</h2>
+        <!-- step line -->
+        <div class="stepper d-flex align-items-center">
+          <div class="step active">
+            <div class="circle-container"></div>
+            <div class="label-container">寄送地址</div>
+            <div class="connect-line"></div>
+          </div>
+
+          <div class="step">
+            <div class="circle-container"></div>
+            <div class="label-container">運送方式</div>
+            <div class="connect-line"></div>
+          </div>
+
+          <div class="step">
+            <div class="circle-container"></div>
+            <div class="label-container">付款資訊</div>
+          </div>
+        </div>
+        <!-- form panel -->
+        <div class="form-panel">
+          <form id="a-form">
+            <!-- address section -->
+            <div class="section address-info">
+              <h2 class="form-title">寄送地址</h2>
+              <div class="form-wrap mt-6">
+                <div class="form-col d-flex justify-content-between">
+                  <div class="form-row d-flex flex-column gender">
+                    <label for="title">稱謂</label>
+                    <div class="select-wrap">
+                      <select name="" id="title" required>
+                        <option value="mister" selected>先生</option>
+                        <option value="miss">小姐</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row d-flex flex-column name">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" placeholder="請輸入姓名">
+                  </div>
+                </div>
+                <div class="form-col-screen">
+                  <div class="form-row d-flex flex-column tel">
+                    <label for="">電話</label>
+                    <input type="text" placeholder="請輸入行動電話">
+                  </div>
+                  <div class="form-row d-flex flex-column email">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="請輸入電子郵件">
+                  </div>
+                </div>
+                <div class="form-col-screen">
+                  <div class="form-row d-flex flex-column city">
+                    <label for="">縣市</label>
+                    <div class="select-wrap">
+                      <select name="" id="" required>
+                        <option value="" selected disabled>請選擇縣市</option>
+                        <option value="">台北市</option>
+                        <option value="">新北市</option>
+                        <option value="">台中市</option>
+                        <option value="">台南市</option>
+                        <option value="">高雄市</option>
+                        <option value="">東部地區</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row d-flex flex-column address">
+                    <label for="address">地址</label>
+                    <input type="text" placeholder="請輸入地址">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dilevery section -->
+            <div class="section delivery-info d-none">
+              <h2 class="form-title">運送方式</h2>
+              <div class="form-wrap mt-6">
+                <div class="form-row d-flex">
+                  <input type="radio" name="delivery" value="standard">
+                  <label for="">
+                    <div class="delivery-method standard">標準運送<span class="fee">免費</span></div>
+                    <div class="days">約3~7個工作天</div>
+                  </label>
+                </div>
+              </div>
+              <div class="form-wrap mt-6">
+                <div class="form-row d-flex form-delivery">
+                  <input type="radio" name="delivery" value="DHL">
+                  <label for="delivery">
+                    <div class="delivery-method dhl">DHL貨運<span class="fee">$500</span></div>
+                    <div class="days">48小時內送達</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- payment section -->
+            <div class="section payment-info d-none">
+              <h2 class="form-title">付款資訊</h2>
+              <div class="form-wrap mt-6">
+                <div class="form-row d-flex flex-column">
+                  <label for="">持卡人姓名</label>
+                  <input type="text" placeholder="John Doe">
+                </div>
+                <div class="form-row d-flex flex-column">
+                  <label for="">卡號</label>
+                  <input type="number" placeholder="1111 2222 3333 4444">
+                </div>
+                <div class="form-col d-flex justify-content-between">
+                  <div class="form-row d-flex flex-column w-40">
+                    <label for="">有效期限</label>
+                    <input type="text" placeholder="MM/YY">
+                  </div>
+                  <div class="form-row d-flex flex-column w-40">
+                    <label for="">CVC/CCV</label>
+                    <input type="number" placeholder="123">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- shopping list -->
+      <div class="shopping-lists-wrapper">
+        <div class="shopping-content">
+          <p class="shopping-lists-title">購物籃</p>
+          <ul class="shopping-lists">
+            <li class="product">
+              <img src="./dist/image/jeans-woman@2x.png" alt="">
+              <div class="product-content d-flex flex-column">
+                <span class="title">破壞補丁修身牛仔褲</span>
+                <div class="amount-control">
+                  <div class="minus"> - </div>
+                  <span class="amount">1</span>
+                  <div class="plus"> + </div>
+                </div>
+                <div class="price">$3,999</div>
+              </div>
+            </li>
+            <li class="product">
+              <img src="./dist/image/jeans-man@2x.png" alt="">
+              <div class="product-content d-flex flex-column">
+                <span class="title">刷色直筒牛仔褲</span>
+                <div class="amount-control">
+                  <div class="minus"> - </div>
+                  <span class="amount">1</span>
+                  <div class="plus"> + </div>
+                </div>
+                <div class="price">$1,299</div>
+              </div>
+            </li>
+          </ul>
+          <div class="price-outline d-flex justify-content-between align-items-center">運費
+            <div class="delivery-free">免費</div>
+          </div>
+          <div class="price-outline d-flex justify-content-between align-items-center">小計
+            <div class="total-fee">$5,298</div>
+          </div>
+        </div>
+      </div>
+      <!-- button section-->
+      <div class="btn-control d-flex justify-content-between">
+        <button class="btn btn-outline d-none">&larr;上一步</button>
+        <button class="btn btn-primary">下一步&rarr;</button>
+      </div>
+    </div>
+
+  </main>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-wrap d-flex justify-content-between">
+        <div class="logo">
+          <img src="./dist/image/Logo@2x.png" alt="" class="brand-logo">
+        </div>
+
+        <div class="footer-col service">
+          <div class="footer-title">客戶服務</div>
+          <ul class="footer-list">
+            <li class="footer-item">運送說明</li>
+            <li class="footer-item">退換貨相關</li>
+            <li class="footer-item">付款資訊</li>
+            <li class="footer-item">FAQ</li>
+          </ul>
+        </div>
+
+        <div class="footer-col about">
+          <div class="footer-title">關於我們</div>
+          <ul class="footer-list">
+            <li class="footer-item">品牌故事</li>
+            <li class="footer-item">媒體聯繫</li>
+            <li class="footer-item">Press kit</li>
+          </ul>
+        </div>
+
+        <div class="footer-col infomation">
+          <div class="footer-title">資訊</div>
+          <ul class="footer-list">
+            <li class="footer-item">隱私權政策</li>
+            <li class="footer-item">Cookie</li>
+            <li class="footer-item">GDPR</li>
+          </ul>
+        </div>
+        <div class="footer-col follow">
+          <div class="footer-title">追蹤ALPHA SHOP</div>
+          <ul class="footer-list">
+            <li class="footer-item">+886 02123-45678</li>
+            <li class="footer-item social-media d-flex">
+              <img src="./dist/image/fb@2x.png" alt="">
+              <img src="./dist/image/ig@2x.png" alt="">
+              <img src="./dist/image/chat@2x.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+
+
+
+
+
+  <script src=" ./src/main.js "></script>
+</body>
+
+</html>
